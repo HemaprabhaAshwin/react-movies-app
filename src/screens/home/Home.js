@@ -20,6 +20,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Checkbox from '@material-ui/core/Checkbox';
 import ListItemText from '@material-ui/core/ListItem';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -157,12 +158,28 @@ class Home extends Component {
                                 <FormControl className={classes.formControl}>
                                     <TextField 
                                      id="releaseDateStart"
-                                     label="Release Date start"
+                                     label="Release Date Start"
                                      type="date"
                                      defaultValue=""
                                      InputLabelProps={{shrink: true}}
                                      />
                                 </FormControl>
+                                <FormControl className={classes.formControl}>
+                                    <TextField 
+                                     id="releaseDateEnd"
+                                     label="Release Date End"
+                                     type="date"
+                                     defaultValue=""
+                                     InputLabelProps={{shrink: true}}
+                                     />
+                                </FormControl>
+                                <br /><br />
+                                <FormControl className={classes.formControl}>
+                                    <Button variant="contained" color="primary">
+                                        APPLY
+                                    </Button>
+                                </FormControl>
+
                                
                             </CardContent>
                         </Card>
