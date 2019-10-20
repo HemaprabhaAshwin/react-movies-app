@@ -26,6 +26,7 @@ class Details extends Component{
 
     render() {
         let movie = this.state.movie;
+       // let releaseDate = this.state.movie.release_date;
         return(
             <div className="details"> 
                 <Header />
@@ -39,6 +40,18 @@ class Details extends Component{
                         </div>
                         <div>
                             <Typography><span className="bold">Genre: </span> {movie.genres.join(',')}</Typography>
+                        </div>
+                        <div>
+                            <Typography><span className="bold">Duration: </span> {movie.duration}</Typography>
+                        </div>
+                        <div>
+                            <Typography><span className="bold">Relaese Date: </span> {new Date(movie.release_date).toDateString()}</Typography>
+                        </div>
+                        <div>
+                            <Typography><span className="bold">Rating: </span> {movie.critics_rating}</Typography>
+                        </div>
+                        <div>
+                            <Typography><span className="bold">Plot: </span> <a href={movie.wiki_url}>(Wiki Link)</a> {movie.storyline}</Typography>
                         </div>
                     </div>
                     <div className="rightDetails">
