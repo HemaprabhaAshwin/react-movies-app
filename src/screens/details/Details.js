@@ -64,7 +64,7 @@ class Details extends Component {
         window.location = url;
     }
 
-    starClickHandler = (id) => {
+    starClickHandler = (id) => () =>  {
         let starIconList =[];
         for(let star of this.state.starIcons){
             let starNode= star;
@@ -75,7 +75,7 @@ class Details extends Component {
             }
             starIconList.push(starNode);
         }
-        //this.setState({starIcons: starIconList});
+        this.setState({starIcons: starIconList});
     }
 
     render() {
